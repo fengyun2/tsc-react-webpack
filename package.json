@@ -4,8 +4,8 @@
   "description": "+- src/ |   +- components | +- dist/",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run dev",
+    "dev": "webpack-dev-server --config webpack.config.js --history-api-fallback --devtool eval --colors --inline --hot --content-base src"
   },
   "repository": {
     "type": "git",
@@ -21,13 +21,24 @@
   },
   "homepage": "https://github.com/fengyun2/typescript-tutorial#readme",
   "dependencies": {
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1"
+    "@types/react": "^15.0.18",
+    "@types/react-dom": "^0.14.23",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.0",
+    "css-loader": "^0.27.3",
+    "eslint": "^3.18.0",
+    "eslint-loader": "^1.6.3",
+    "html-webpack-plugin": "^2.28.0",
     "open-browser-webpack-plugin": "^0.0.2",
     "source-map-loader": "^0.1.5",
+    "style-loader": "^0.16.0",
     "ts-loader": "^0.8.2",
+    "typed-css-modules": "^0.2.0",
+    "typed-css-modules-loader": "^0.0.5",
+    "typescript": "^2.2.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
